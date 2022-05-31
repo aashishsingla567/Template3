@@ -1,0 +1,38 @@
+extends form.pug
+
+block occupation
+    label(for='occupation') Occupation: &nbsp;
+    select#occupation(name='occupation')
+        option(value='student') Student (+1/+2)
+        option(value='undergraduate') Under graduate (UG)
+        option(value='postgraduate') Post-graduate (PG)
+        option(value='other') Other...
+    input#occupation_other(type='' placeholder='Occupation' style = 'display: none;')
+block courses
+    label(for='courses') Select your course:- &nbsp;
+    select#courses(name='courses')
+        option#c1(value='C1') COURSE NAME1
+        option#c2(value='C2') COURSE NAME2
+        option#c3(value='C3') COURSE NAME3
+        option#c4(value='C4') COURSE NAME4
+    //- input(list = "courses", name="courses")
+    //- datalist#courses
+    //-     option#c1(value='Course1') 
+    //-      | COURSE NAME1
+    //-     option#c2(value='Course2')
+    //-      | COURSE NAME2
+    //-     option#c3(value='Course3')
+    //-      | COURSE NAME3
+    //-     option#c4(value='Course4') 
+    //-      | COURSE NAME4
+
+block bottomScript
+    script(src="./script/script.js")
+    script.
+        (function () {
+            console.log ("is it working?");
+            activateOther ("occupation");
+            validator ("email", emailCheck, emailMessage, "emailValidation");
+            validator ("phone", phoneCheck, phoneMessage, "phoneValidation");
+            console.log ("yes it is working");
+        })();

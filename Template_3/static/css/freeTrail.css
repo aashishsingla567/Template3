@@ -1,0 +1,200 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+    /* --color1        : #EDC7B7;
+    --color2        : #EEE2DC;
+    --color3        : #123C69;
+    --color4        : #AC3B61; */
+
+    --color1: #EDC7B7;
+    --color2: #EEE2DC;
+    --color3: #123C69;
+    --color4: #AC3B61;
+
+    --bg_color: var(--color1);
+    --text_color: var(--color3);
+    --link_color: var(--color4);
+    --btn_color: #ac3b614c;
+    --brdr_rad: 1.5rem;
+    --tpr: 0.5;
+}
+
+.content {
+    padding-bottom: 5%;
+}
+
+.info,
+.here {
+    width: 85%;
+    margin: auto;
+    font-size: 1.1rem;
+    /* border: 1px solid; */
+    padding-top: 5%;
+    text-align: center;
+}
+
+
+.register {
+    max-width: 50rem;
+    width: 85%;
+    margin: auto;
+    margin-top: 1%;
+    border-radius: 1rem;
+    padding: 6% 5%;
+    box-sizing: unset;
+    text-align: justify;
+    background-color: var(--color3);
+    color: white;
+}
+
+.form-wrap {
+    display: inline-block;
+    width: 68%;
+}
+
+.register form {
+    display: inline-block;
+    /* display: block; */
+    margin: auto;
+    width: 100%;
+}
+
+.register #form_heading {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: auto;
+    margin-top: 5%;
+    margin-right: 2%;
+    font-size: 1.5rem;
+    margin-bottom: 5%;
+}
+
+.register .field {
+    margin: 2% 1%;
+    width: 100%;
+}
+
+select , datalist {
+    cursor: pointer;
+}
+
+option {
+    cursor: pointer;
+}
+
+.register select,
+.register datalist,
+.register input {
+    font-family: "poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1rem;
+    text-indent: 10%;
+    height: 1.5rem;
+    max-height: 1.5rem;
+    text-align: left;
+    box-sizing: content-box;
+    padding: 2% 1%;
+    display: block;
+    width: 90%;
+    background-color: var(--color2);
+    color: var(--color4);
+    border-radius: var(--brdr_rad);
+    margin: auto;
+}
+
+
+.register select, .register datalist {
+    font-size: 1rem;
+}
+
+.register select:hover,
+.register select:active,
+.register select:focus
+.register datalist:hover,
+.register datalist:active,
+.register datalist:focus {
+    font-size: 1.2rem;
+}
+
+.register input:hover,
+.register input:active,
+.register input:focus {
+    font-size: 1.5rem;
+}
+
+.register label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 3% 5%;
+    cursor: default;
+}
+
+
+.register .field .message {
+    width: fit-content;
+    margin: auto;
+    font-size: 1.3rem;
+}
+
+.form-button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: var(--brdr_rad);
+    border: none;
+    text-align: center;
+    width: 35%;
+    height: 2.7rem;
+    /* max-width: 10rem; */
+    padding: 1.5%;
+    display: inline-block;
+    margin: 7%;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    /* margin-left: 28%; */
+    background-color: var(--color2);
+    color: var(--color3);
+    cursor: pointer;
+}
+
+.form-button:hover {
+    color: white;
+    background-color: black;
+    opacity: 60%;
+}
+
+.form-button:active {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.44);
+    opacity: 20%;
+}
+
+@media screen and (max-width: 700px) {
+
+    .form-wrap {
+        width: 100%;
+    }
+
+    .register form {
+        width: 100%;
+    }
+
+    .register #form_heading {
+        display: grid;
+        width: 100%;
+        font-size: 1.5rem;
+        margin-bottom: 5%;
+    }
+
+    .register .field label {
+        font-size: 1rem;
+        margin-right: 20%;
+        text-align: left;
+    }
+}

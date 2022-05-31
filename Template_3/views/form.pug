@@ -1,0 +1,50 @@
+block topScript
+block css
+link(rel="stylesheet", href="css/freeTrail.css", attr)
+.register
+    #form_heading
+        | Apply here for 
+        br
+        br
+        b
+        | Regular classes...
+    .form-wrap
+        form(action='')
+            .field
+                // <label for="name">Name</label>
+                input#firstName(type='text' placeholder='First Name')
+            .field
+                // <label for="name">Name</label>
+                input#lastName(type='text' placeholder='Last Name/Surname')
+            .field
+                // <label for="email">E-mail</label>
+                input#email(type='email' placeholder='E-mail')
+                label.message#emailValidation(for = "email")
+                    //- | &nbsp;
+            .field
+                // <label for="phone"> Phone </label>
+                input#phone(type='tel' placeholder='Phone')
+                label.message#phoneValidation(for = "phone")
+                    //- | &nbsp;
+            .field
+                // <label for="occupation"> Occupation </label>   
+                block occupation
+                //- label(for='occupation') Occupation: &nbsp;
+                //- select#occupation(name='occupation')
+                //-     option(value='student') Student (+1/+2)
+                //-     option(value='undergraduate') Under graduate (UG)
+                //-     option(value='postgraduate') Post-graduate (PG)
+                //-     option(value='other') Other...
+                //- //- input#occupation(type='' placeholder='Occupation')
+            .field
+                block courses
+                //- label(for='courses') Select your course:- &nbsp;
+                //- select#courses(name='courses')
+                //-     option#c1(value='C1') COURSE NAME1
+                //-     option#c2(value='C2') COURSE NAME2
+                //-     option#c3(value='C3') COURSE NAME3
+                //-     option#c4(value='C4') COURSE NAME4
+            //- input#occupation(type='text' placeholder='Select your course')
+            button.form-button(type="reset")  Reset
+            button.form-button(type="submit") Submit
+block bottomScript

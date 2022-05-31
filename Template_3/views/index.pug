@@ -1,0 +1,12 @@
+extends template.pug 
+
+block title
+    | CLA : CA LEARNING ACADEMY
+
+append head
+    meta(name='description' content="CA Learning Academy, We provide ----- for -----, If you can book your free trail or regiseter for face2face classes here")
+block content
+    h1= "Wanna register?"
+    .form
+        include ./index_form.pug
+           

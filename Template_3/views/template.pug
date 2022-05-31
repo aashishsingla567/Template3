@@ -1,0 +1,141 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        block styles
+        link(rel='stylesheet' href='../css/index.css')
+        //- link(rel='stylesheet' href='../css/freeTrail.css')
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap' rel='stylesheet')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
+        block scripts
+        script(src='https://kit.fontawesome.com/eb609c755d.js' crossorigin='anonymous')
+        script(defer='' src='./script/resize.js')
+        title
+            block title
+        block head
+
+    .head-wrap
+        .header
+            .line1
+                span#title.left
+                    a(href='/' style='color: var(--text_color)')
+                        img.CLA_LOGO(src="./images/CLA_logo-removebg.png", alt="alt")
+                //- span#address.left
+                //-     a(href='address.html')
+                //-         // THIS WILL BE A LINK TO GOOGLE MAPS
+                //-         | address
+                //- span#tele.left
+                //-     a(href='tel:+')
+                //-         | +91 98********
+                // RIGHT SIDE
+                span.right#timings
+                    i.fa-solid.fa-clock(style = 'vertical-align: middle; font-size: 1em;')
+                    | &nbsp;Timings 10 AM - 5PM
+                    #menu.btn
+                        i.fa-solid.fa-bars
+                            //- | m e n u
+                    script(defer='').
+                        var line2 = document.getElementsByClassName("line2");
+                        var menu = document.getElementById("menu");
+                        function hamburger() {
+                        menu.addEventListener("click", () => {
+                            if (line2[0].style.display != "block") {
+                                line2[0].style.display = "block";
+                                
+                            }
+                            else {
+                                line2[0].style.display = "none";
+                                
+                            }
+                            console.log ("MENU");
+                        });
+                        }
+                        hamburger();
+                span.right.social
+                    a#fb(href='fBook.html')
+                        span.social-wrap
+                            i.fab.fa-facebook &nbsp;
+                    a#tw(href='twit.html')
+                        span.social-wrap
+                            i.fab.fa-twitter &nbsp;
+                    a#li(href='lkdin.html')
+                        span.social-wrap
+                            i.fab.fa-linkedin &nbsp;
+               
+            .line2
+                nav
+                    span.navIcon
+                        a(href='../')
+                            | HOME
+                    span.navIcon
+                        a(href='./freeTrail')
+                            | FREE TRAIL
+                    span.navIcon
+                        a(href='./register')
+                            | REGISTER
+                    span.navIcon
+                        a(href='./payments')
+                            | PAY FEES
+                    span.navIcon
+                        a(href='./quickLinks')
+                            | QUICK-LINKS 
+                        
+    .content
+            h1 Welcome, #{user_name}
+            block content
+    a#chatNow(href='wApp.html' target='_blank')
+        i.fab.fa-whatsapp
+        |  Chat now!
+    footer
+        #contacts  
+            h4 Feel free to contact us
+            #Email
+                | E-mail -
+                a(href='mailto:')
+                    | ****@****.com
+            #tele
+                | Phone -
+                a(href='tel:+')
+                    | 91 97832*****
+            p
+                small#copy
+                    | 	&#169; Copyright ## COMPANY NAME ## &#8482; 
+                    div
+                    |             WARNING - Any act of copying this website and/or its contents might be
+                    |             liable to legal action. 
+                    div
+                    |             Please proceed with caution.
+        style.
+            .myIcon {
+                width: 200px;
+                height: 150px;
+                overflow: hidden;
+                margin-top: -5%;
+                margin-left: 26%;
+            }
+            .myIcon img {
+                border: 1px solid;
+                border-radius: 10px;
+                margin: 27px 0px 0px -100px;
+            }
+            .myIcon:hover {
+                opacity: 80%;
+            }
+            .myIcon:active {
+                opacity: 50%;
+            }
+            #poweredBy {
+                width: 20%;
+                margin: auto;
+                display: none;
+                place-items: center;
+            }
+        #poweredBy
+            | Designed by - 
+            br
+            a(href='redirect.html')
+                .myIcon
+                    img#my-icon(defer='' width='160px' src='images/Aashish.png' alt='AASHISH SINGLA')
